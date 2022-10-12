@@ -1,7 +1,10 @@
 const express = require("express");
 const app = express();
+const cors = require("cors");
 const phones = require("./phone.json");
 const port = 5000;
+
+app.use(cors());
 
 app.get("/", (req, res) => {
   res.send("look hlw Iphone server runing!");
